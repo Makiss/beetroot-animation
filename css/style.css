@@ -1,0 +1,56 @@
+svg {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 520px;
+	height: 200px;
+	transform: translate(-50%, -50%);
+}
+
+.beetroot {
+	fill: transparent;
+	stroke: #77c167;
+	stroke-dasharray: 179;
+	animation-name: draw, fill-beetroot;
+	animation-duration: 5s, 3s;
+	animation-delay: 0s, 5s;
+	animation-fill-mode: forwards;
+}
+
+.name {
+	fill: transparent;
+	animation-name: fill-name;
+	animation-duration: 3s;
+	animation-delay: 8s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes draw {
+	0% {	
+		stroke-dashoffset: 179;
+	}
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes fill-beetroot {
+	0% {	
+		fill: transparent;
+	}
+
+	100% {	
+		fill: #77c167;
+	}
+}
+
+
+@keyframes fill-name {
+	0% {	
+		fill: transparent;
+	}
+
+	100% {	
+		fill: #3d3935;
+	}
+}
